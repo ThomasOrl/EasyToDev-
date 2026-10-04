@@ -1,0 +1,26 @@
+# Dependencies
+/node_modules/
+
+# Production build and local tooling caches
+/dist/
+/.vite/
+/coverage/
+/.eslintcache
+
+# Local environment files (keep the example template versionable)
+.env
+.env.*
+!.env.example
+
+# Package manager logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.idea/
