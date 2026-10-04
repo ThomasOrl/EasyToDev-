@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { config } from "../data/content";
+
+const projectEmailLink = `mailto:${config.email}?subject=${encodeURIComponent(
+  "Parlons de mon projet",
+)}`;
 
 export default function CTA() {
   return (
@@ -9,7 +14,7 @@ export default function CTA() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="contact-cta p-12 md:p-20 rounded-3xl bg-[#111] border border-[#222] text-center"
+          className="contact-cta p-12 md:p-20 rounded-3xl border border-[#222] text-center"
         >
           <p className="contact-cta__eyebrow">VOTRE PROJET COMMENCE ICI</p>
           <h2 className="text-4xl md:text-5xl font-semibold mb-6 contact-cta__title">
@@ -19,14 +24,14 @@ export default function CTA() {
             Parlons de votre projet et de vos objectifs.
           </p>
           <a
-            href="mailto:contact@thomasorls.be?subject=Parlons%20de%20mon%20projet"
+            href={projectEmailLink}
             className="btn btn-primary text-lg contact-cta__button"
           >
             Parler de mon projet
             <ArrowRight size={20} />
           </a>
           <div className="contact-cta__details">
-            <a href="mailto:contact@thomasorls.be">contact@thomasorls.be</a>
+            <a href={`mailto:${config.email}`}>{config.email}</a>
             <span aria-hidden="true">·</span>
             <span>Réponse sous 48 h</span>
           </div>

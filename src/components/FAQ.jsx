@@ -29,9 +29,18 @@ export default function FAQ() {
               className="border border-[#222] rounded-xl overflow-hidden"
             >
               <button
+                id={`faq-question-${index}`}
+                type="button"
                 className="w-full flex items-center justify-between p-6 text-left"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                onClick={() =>
+                  setOpenIndex((currentIndex) =>
+                    currentIndex === index ? null : index,
+                  )
+                }
                 aria-expanded={openIndex === index}
+                aria-controls={
+                  openIndex === index ? `faq-answer-${index}` : undefined
+                }
               >
                 <span className="font-medium">{item.question}</span>
                 <ChevronDown
@@ -44,6 +53,9 @@ export default function FAQ() {
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div
+                    id={`faq-answer-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-question-${index}`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}

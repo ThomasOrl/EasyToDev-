@@ -1,19 +1,28 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, ArrowRight } from 'lucide-react'
 import { useScroll } from '../hooks/useScroll'
-import { config } from '../data/content'
+import { config, navigation } from '../data/content'
 
 export default function Navbar() {
   const scrolled = useScroll()
   const [mobileOpen, setMobileOpen] = useState(false)
 
-  const navLinks = [
-    { href: '#services', label: 'Services' },
-    { href: '#portfolio', label: 'Projets' },
-    { href: '#process', label: 'Processus' },
-    { href: '#faq', label: 'FAQ' },
-  ]
+  useEffect(() => {
+    if (!mobileOpen) return
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setMobileOpen(false)
+    }
+
+    window.addEventListener('keydown', closeOnEscape)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener('keydown', closeOnEscape)
+    }
+  }, [mobileOpen])
 
   return (
     <>
@@ -24,13 +33,16 @@ export default function Navbar() {
           scrolled ? 'bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-[#222]' : 'bg-transparent'
         }`}
       >
-        <nav className="container flex items-center justify-between h-20">
+        <nav
+          aria-label="Navigation principale"
+          className="container flex items-center justify-between h-20"
+        >
           <a href="#" className="text-xl font-semibold tracking-tight">
             {config.name}
           </a>
 
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navigation.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -49,9 +61,12 @@ export default function Navbar() {
           </div>
 
           <button
+            type="button"
             className="md:hidden p-2"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Menu"
+            onClick={() => setMobileOpen((isOpen) => !isOpen)}
+            aria-label={mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+            aria-expanded={mobileOpen}
+            aria-controls={mobileOpen ? 'mobile-navigation' : undefined}
           >
             {mobileOpen ? <X /> : <Menu />}
           </button>
@@ -59,13 +74,15 @@ export default function Navbar() {
       </motion.header>
 
       {mobileOpen && (
-        <motion.div
+        <motion.nav
+          id="mobile-navigation"
+          aria-label="Navigation mobile"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="fixed inset-0 z-40 bg-[#0a0a0a] md:hidden"
         >
           <div className="container flex flex-col justify-center h-full gap-8">
-            {navLinks.map((link) => (
+            {navigation.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -84,7 +101,7 @@ export default function Navbar() {
               <ArrowRight size={20} />
             </a>
           </div>
-        </motion.div>
+        </motion.nav>
       )}
     </>
   )

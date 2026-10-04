@@ -1,12 +1,20 @@
 export const config = {
   name: "EasyToDev",
-  email: "contact@thomasorls.be",
+  email: "thomas.orlans.pro@gmail.com",
   location: "Belgique",
   socials: {
-    github: "https://github.com/thomasorls",
-    linkedin: "https://linkedin.com/in/thomasorls",
+    github: "https://github.com/ThomasOrl",
+    linkedin:
+      "https://www.linkedin.com/in/thomas-orlans-6a8434201/?isSelfProfile=true",
   },
 };
+
+export const navigation = [
+  { href: "#services", label: "Services" },
+  { href: "#portfolio", label: "Projets" },
+  { href: "#process", label: "Processus" },
+  { href: "#faq", label: "FAQ" },
+];
 
 export const stats = [
   { value: "10+", label: "Projets réalisés" },
@@ -66,7 +74,7 @@ export const pricing = [
     description: "Pour une présence web plus complète.",
     delivery: "Livraison sous 2 à 3 semaines",
     features: [
-      "Jusqu'a 5 sections/pages",
+      "Jusqu’à 5 sections/pages",
       "Design UI personnalisé",
       "Développement React",
       "Responsive complet",
@@ -134,7 +142,7 @@ export const portfolio = [
 export const process = [
   {
     step: "01",
-    title: "Echange",
+    title: "Échange",
     description: "On échange sur votre activité, vos objectifs et vos besoins.",
   },
   {
@@ -199,22 +207,13 @@ export const testimonials = [
       "Thomas a su comprendre notre activité et présenter clairement notre gamme de produits. Le site reflète l’univers de Pasyvero et facilite la découverte de nos solutions.",
     rating: 5,
   },
-  {
-    name: "Pierre Martin",
-    company: "Agence ABC",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
-    content:
-      "Professionnel, réactif et à l'écoute. Le résultat dépasse nos attentes. Je recommande vivement.",
-    rating: 5,
-  },
 ];
 
 export const faq = [
   {
     question: "Combien coûte une landing page ?",
     answer:
-      "Les tarifs commencent à 390€ pour une landing page simple. Chaque projet étant unique, un devis personnalisé est proposé après discussion de vos besoins.",
+      "Les tarifs commencent à 390€ prix hors TVA pour une landing page simple. Chaque projet étant unique, un devis personnalisé est proposé après discussion de vos besoins.",
   },
   {
     question: "Combien de temps faut-il pour réaliser un projet ?",

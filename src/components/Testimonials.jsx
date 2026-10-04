@@ -15,7 +15,7 @@ export default function Testimonials() {
           Témoignages
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="mx-auto grid max-w-3xl gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
@@ -14,32 +14,31 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className="app"
-    >
-      <div className="ambient-light" aria-hidden="true" />
-      <div className="lightning-flash" aria-hidden="true" />
+    <MotionConfig reducedMotion="user">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className="app"
+      >
+        <Navbar />
 
-      <Navbar />
+        <main>
+          <Hero />
+          <Stats />
+          <Services />
+          <Pricing />
+          <Portfolio />
+          <Process />
+          <WhyMe />
+          <Testimonials />
+          <FAQ />
+          <CTA />
+        </main>
 
-      <main>
-        <Hero />
-        <Stats />
-        <Services />
-        <Pricing />
-        <Portfolio />
-        <Process />
-        <WhyMe />
-        <Testimonials />
-        <FAQ />
-        <CTA />
-      </main>
-
-      <Footer />
-    </motion.div>
+        <Footer />
+      </motion.div>
+    </MotionConfig>
   );
 }
 

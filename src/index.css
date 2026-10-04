@@ -93,7 +93,7 @@ img {
   align-items: center;
   gap: 8px;
   margin-top: 2px;
-  color: #777;
+  color: #888;
   font-size: 0.8rem;
   letter-spacing: 0.01em;
 }
@@ -296,6 +296,19 @@ img {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
   .portfolio-project-card__hint-border path {
     stroke-dashoffset: 0;
   }
@@ -329,7 +342,7 @@ img {
 }
 
 .portfolio-project-card__number {
-  color: #686868;
+  color: #888;
   font-variant-numeric: tabular-nums;
 }
 
@@ -491,7 +504,7 @@ img {
 }
 
 .pricing-card__tax {
-  color: #777;
+  color: #888;
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.015em;
@@ -503,7 +516,7 @@ img {
   z-index: 1;
   width: fit-content;
   margin-bottom: 16px;
-  color: #303030;
+  color: #606060;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: -0.065em;
@@ -541,7 +554,7 @@ img {
   align-items: center;
   gap: 10px;
   margin-top: 22px;
-  color: #777;
+  color: #888;
   font-size: 0.84rem;
 }
 
@@ -569,7 +582,7 @@ img {
 }
 
 .process-step:hover .process-step__number {
-  color: #454545;
+  color: #8a8a8a;
 }
 
 .process-step__connector {
@@ -632,7 +645,7 @@ img {
 
 .pricing-card__delivery svg {
   flex: 0 0 auto;
-  color: #777;
+  color: #858585;
 }
 
 .pricing-card__cta {

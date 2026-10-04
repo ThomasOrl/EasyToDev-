@@ -64,7 +64,7 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="text-center text-[#666] text-sm mt-8">
+        <p className="text-center text-[#888] text-sm mt-8">
           Chaque projet étant différent, un devis personnalisé peut être proposé
           après discussion.
         </p>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="matrix(710 470 -440 665 600 0)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#292929"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="line" x1="110" y1="510" x2="1090" y2="510" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#555" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#555"/>
+      <stop offset="1" stop-color="#555" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#glow)" d="M0 0h1200v630H0z"/>
+  <rect x="64.5" y="64.5" width="1071" height="501" rx="28" stroke="#FFFFFF" stroke-opacity=".12"/>
+  <text x="112" y="145" fill="#F5F5F5" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" letter-spacing="-1">EasyToDev</text>
+  <text x="112" y="260" fill="#929292" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" letter-spacing="4">SITES WEB SUR MESURE</text>
+  <text x="108" y="352" fill="#F5F5F5" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="700" letter-spacing="-2.8">Des sites web qui transforment</text>
+  <text x="108" y="423" fill="#F5F5F5" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="700" letter-spacing="-2.8">les visiteurs en clients.</text>
+  <path stroke="url(#line)" d="M112 475h976"/>
+  <text x="112" y="525" fill="#A1A1A1" font-family="Arial,Helvetica,sans-serif" font-size="20">Sites vitrines · Landing pages · Belgique</text>
+</svg>

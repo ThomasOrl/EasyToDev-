@@ -21,7 +21,7 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="section-title portfolio-title"
           >
-            Le numérique, pensé dans les moindres détails.
+            Le numérique pensé dans les moindres détails.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 8 }}
@@ -116,7 +116,6 @@ export default function Portfolio() {
           ))}
         </div>
       </div>
-
     </section>
   );
 }

@@ -12,7 +12,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.1] mb-6"
           >
-            Des applications qui transforment les visiteurs en clients.
+            Des sites web qui transforment les visiteurs en clients.
           </motion.h1>
 
           <motion.p
@@ -21,8 +21,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-[#a1a1a1] max-w-2xl mb-10"
           >
-            Conception et développement de landing pages et applications modernes, rapides et
-            pensées pour présenter votre activité et convertir votre audience.
+            Conception et développement de sites web et landing pages
+            sur mesure, optimisés et pensés pour attirer de nouveaux clients.
           </motion.p>
 
           <motion.div
@@ -44,7 +44,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-sm text-[#666] mt-8"
+            className="text-sm text-[#888] mt-8"
           >
             Design sur mesure • Développement React • Responsive • Optimisé pour
             la conversion

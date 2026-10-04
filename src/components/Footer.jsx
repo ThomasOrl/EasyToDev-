@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail } from 'lucide-react'
-import { config } from '../data/content'
+import { config, navigation } from '../data/content'
 
 export default function Footer() {
   return (
@@ -13,19 +13,16 @@ export default function Footer() {
             </p>
           </div>
 
-          <nav className="flex items-center gap-6">
-            <a href="#services" className="text-sm text-[#a1a1a1] hover:text-white transition-colors">
-              Services
-            </a>
-            <a href="#portfolio" className="text-sm text-[#a1a1a1] hover:text-white transition-colors">
-              Projets
-            </a>
-            <a href="#process" className="text-sm text-[#a1a1a1] hover:text-white transition-colors">
-              Processus
-            </a>
-            <a href="#faq" className="text-sm text-[#a1a1a1] hover:text-white transition-colors">
-              FAQ
-            </a>
+          <nav aria-label="Navigation de pied de page" className="flex items-center gap-6">
+            {navigation.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm text-[#a1a1a1] hover:text-white transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </nav>
 
           <div className="flex items-center gap-4">
@@ -57,7 +54,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-[#222] text-center text-sm text-[#666]">
+        <div className="mt-8 pt-8 border-t border-[#222] text-center text-sm text-[#888]">
           &copy; {new Date().getFullYear()} {config.name}. Tous droits réservés.
         </div>
       </div>
