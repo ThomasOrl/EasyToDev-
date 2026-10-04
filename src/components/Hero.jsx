@@ -21,8 +21,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-[#a1a1a1] max-w-2xl mb-10"
           >
-            Conception et développement de sites web et landing pages
-            sur mesure, optimisés et pensés pour attirer de nouveaux clients.
+            Conception et développement de sites web et landing pages sur
+            mesure, optimisés et pensés pour attirer de nouveaux clients.
           </motion.p>
 
           <motion.div

@@ -26,9 +26,7 @@ export default function Pricing() {
               className={`pricing-card${plan.recommended ? " pricing-card--recommended" : ""}`}
             >
               {plan.badge && (
-                <span className="pricing-card__badge">
-                  {plan.badge}
-                </span>
+                <span className="pricing-card__badge">{plan.badge}</span>
               )}
 
               <h3 className="pricing-card__name">{plan.name}</h3>
